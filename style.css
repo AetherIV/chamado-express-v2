@@ -53,6 +53,10 @@
   color: var(--text-color);
 }
 
+br{
+  user-select: none;
+}
+
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   display: flex;
