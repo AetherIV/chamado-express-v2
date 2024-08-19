@@ -202,6 +202,6 @@ footer {
     transform: translateX(0);
   }
   to{
-    transform: translatex(-200%);
+    transform: translatex(200%);
   }
 }

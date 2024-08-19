@@ -73,13 +73,27 @@ document.addEventListener("DOMContentLoaded", () => {
             addText('Upsell', document.querySelector('#upsellSituationYes').checked ? 'Sim' : (document.querySelector('#upsellSituationNo').checked ? 'Não' : ''));
             addText('Descreva a situação do Upsell', document.getElementById('upsellDescription').value.trim());
             addText('Mensagens ou prints de erros', document.querySelector('#errorPrintYes').checked ? 'Sim' : (document.querySelector('#errorPrintNo').checked ? 'Não' : ''));
-        
+
             // Unir todos os textos em uma string com quebras de linha
             let finalText = textsToCopy.join('');
             navigator.clipboard.writeText(finalText);
             createNotif("Texto Copiado!", "success");
 
-            event.defaultPrevented();
+            const docNumber = document.getElementById("docNumber").value = '';
+            const errorMessage = document.getElementById("errorMessage").value = '';
+            const problemCause = document.getElementById("problemCause").value = '';
+            const resolution = document.getElementById("resolution").innerHTML = '';
+            const clientFeedback = document.getElementById("clientFeedback").value = '';
+            const humorSelection = document.getElementById("humorSelection").value = 'Selecione';
+            const upsellDescription = document.getElementById("upsellDescription").value = '';
+
+            problemCheckbox.checked = false;
+            doubtCheckbox.checked = false;
+            upsellSituationYes.checked = false;
+            upsellSituationNo.checked = false;
+            errorPrintYes.checked = false;
+            errorPrintNo.checked = false;
+
         }
     })
 
