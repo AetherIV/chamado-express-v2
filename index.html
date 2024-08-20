@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chamado Express V2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="https://www.softensistemas.com.br/assets/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+
+    <header>
+      Chamado Express V2
+      <button class="buttons" id="darkSwitch">
+        <i class="bi bi-moon-stars"></i>
+        <i class="bi bi-brightness-high"></i>
+        </icon>
+      </button>
+    </header>
+
+    <form id="mainBody">
+      <div id="column1">
+
+        <div id="notifsBox"></div>
+        <label class="textLabel">Tipo de chamado:</label>
+
+        <br />
+        <br />
+
+        <label for="problemCheckbox" class="checkboxLabels"
+          >Problema
+          <input type="checkbox" id="problemCheckbox" class="checkboxes" />
+        </label>
+
+        <label for="doubtCheckbox" class="checkboxLabels"
+          >Dúvida
+          <input type="checkbox" id="doubtCheckbox" class="checkboxes" />
+        </label>
+
+        <br />
+        <br />
+        <div class="textDivColumn1">
+          <label for="docNumber" class="textLabels">Número do Documento:</label>
+          <br />
+          <input type="text" id="docNumber" class="textInputs" />
+          <br />
+
+          <label for="errorMessage" class="textLabels">Mensagem de Erro:</label>
+          <br />
+          <input type="text" id="errorMessage" class="textInputs" />
+          <br />
+
+          <label for="problemCause" class="textLabels"
+            >Causa do Problema:</label
+          >
+          <br />
+          <input type="text" id="problemCause" class="textInputs" />
+          <br />
+
+          <label class="textLabels">Resolução:</label>
+          <br />
+          <span contenteditable="true" id="resolution" class="textSpans"></span>
+        </div>
+      </div>
+
+      <div id="column2">
+        <div class="textDivColumn2">
+          <label for="clientFeedback" class="textLabels"
+            >Feedback do cliente</label
+          ><br>
+          <input type="text" id="clientFeedback" class="textInputs" />
+        </div>
+
+        <br />
+
+        <label for="humorSelection" id="selectionLabel"
+          >Humor do cliente:</label
+        >
+        <br />
+        <br />
+        <select name="humor" id="humorSelection">
+          <option value="Selecione">Selecione</option>
+          <option value="Bom">Bom</option>
+          <option value="Regular">Regular</option>
+          <option value="Ruim">Ruim</option>
+        </select>
+
+        <br />
+        <br />
+
+        <label class="textLabels">Upsell:</label>
+
+        <br />
+        <br />
+
+        <label for="upsellSituationYes" class="checkboxLabels"
+          >Sim
+          <input type="checkbox" id="upsellSituationYes" class="checkboxes" />
+        </label>
+
+        <label for="upsellSituationNo" class="checkboxLabels"
+          >Não
+          <input type="checkbox" id="upsellSituationNo" class="checkboxes" />
+        </label>
+
+        <br />
+        <br />
+
+        <div class="textDivColumn2">
+          <label for="upsellDescription">Descreva a situação do Upsell:</label>
+          <br />
+          <span contenteditable="" id="upsellDescription" class="textSpans"></span>
+        </div>
+        <br />
+        <label class="checkboxLabels">Mensagens ou prints de erros:</label>
+
+        <br />
+        <br />
+        <label for="errorPrintYes" class="checkboxLabels"
+          >Sim
+          <input type="checkbox" class="checkboxes" id="errorPrintYes" />
+        </label>
+
+        <label for="errorPrintNo" class="checkboxLabels"
+          >Não
+          <input type="checkbox" id="errorPrintNo" class="checkboxes" />
+        </label>
+        <br />
+        <br />
+        <button id="copyBtn" class="buttons" type="submit">
+          Copiar Textos
+        </button>
+      </div>
+    </form>
+
+    <footer>
+      Desenvolvido por:
+      <br />
+      <strong>Rafael Romera e Gustavo Fernandes</strong>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="darkMode.js" defer></script>
+  </body>
+</html>
