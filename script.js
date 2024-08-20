@@ -58,21 +58,21 @@ document.addEventListener("DOMContentLoaded", () => {
         else{
             function addText(label, value) {
                 if (value) {
-                    textsToCopy.push(`${label}: ${value}\n\n`);
+                    textsToCopy.push(`${label}: ${value}\n`);
                 }
             }
         
             // Capturar os valores e adicionar ao array
-            addText('Tipo de chamado', document.querySelector('.checkboxes:checked') ? document.querySelector('.checkboxLabels').innerText.trim(): '');
-            addText('Número do Documento', document.getElementById('docNumber').value.trim());
-            addText('Mensagem de Erro', document.getElementById('errorMessage').value.trim());
-            addText('Causa do Problema', document.getElementById('problemCause').value.trim());
-            addText('Resolução', document.getElementById('resolution').innerText.trim());
-            addText('Feedback do cliente', document.getElementById('clientFeedback').value.trim());
-            addText('Humor do cliente', document.getElementById('humorSelection').value.trim());
-            addText('Upsell', document.querySelector('#upsellSituationYes').checked ? 'Sim' : (document.querySelector('#upsellSituationNo').checked ? 'Não' : ''));
-            addText('Descreva a situação do Upsell', document.getElementById('upsellDescription').value.trim());
-            addText('Mensagens ou prints de erros', document.querySelector('#errorPrintYes').checked ? 'Sim' : (document.querySelector('#errorPrintNo').checked ? 'Não' : ''));
+            addText('TIPO DE CHAMADO', document.querySelector('.checkboxes:checked') ? document.querySelector('.checkboxLabels').innerText.trim(): '');
+            addText('NÚMERO DO DOCUMENTO', document.getElementById('docNumber').value.trim());
+            addText('MENSAGEM DE ERRO', document.getElementById('errorMessage').value.trim());
+            addText('CAUSA DO PROBLEMA', document.getElementById('problemCause').value.trim());
+            addText('RESOLUÇÃO', document.getElementById('resolution').innerText.trim());
+            addText('FEEDBACK DO CLIENTE', document.getElementById('clientFeedback').value.trim());
+            addText('HUMOR DO CLIENTE', document.getElementById('humorSelection').value.trim());
+            addText('UPSELL', document.querySelector('#upsellSituationYes').checked ? 'Sim' : (document.querySelector('#upsellSituationNo').checked ? 'Não' : ''));
+            addText('DESCRIÇÃO UPSELL', document.getElementById('upsellDescription').value.trim());
+            addText('MENSAGENS OU PRINT DE ERROS', document.querySelector('#errorPrintYes').checked ? 'Sim' : (document.querySelector('#errorPrintNo').checked ? 'Não' : ''));
 
             // Unir todos os textos em uma string com quebras de linha
             let finalText = textsToCopy.join('');
