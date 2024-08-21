@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else{
             function addText(label, value) {
                 if (value) {
-                    textsToCopy.push(`${label}: ${value}\n`);
+                    textsToCopy.push(`${label}: ${value} \n\n`);
                 }
             }
         
@@ -71,12 +71,12 @@ document.addEventListener("DOMContentLoaded", () => {
             addText('FEEDBACK DO CLIENTE', document.getElementById('clientFeedback').value.trim());
             addText('HUMOR DO CLIENTE', document.getElementById('humorSelection').value.trim());
             addText('UPSELL', document.querySelector('#upsellSituationYes').checked ? 'Sim' : (document.querySelector('#upsellSituationNo').checked ? 'Não' : ''));
-            addText('DESCRIÇÃO UPSELL', document.getElementById('upsellDescription').value.trim());
+            addText('DESCRIÇÃO UPSELL', document.getElementById('upsellDescription').innerText.trim());
             addText('MENSAGENS OU PRINT DE ERROS', document.querySelector('#errorPrintYes').checked ? 'Sim' : (document.querySelector('#errorPrintNo').checked ? 'Não' : ''));
 
             // Unir todos os textos em uma string com quebras de linha
             let finalText = textsToCopy.join('');
-            navigator.clipboard.writeText(finalText);
+            navigator.clipboard.writeText(finalText).trim();
             createNotif("Texto Copiado!", "success");
 
             const docNumber = document.getElementById("docNumber").value = '';
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const resolution = document.getElementById("resolution").innerHTML = '';
             const clientFeedback = document.getElementById("clientFeedback").value = '';
             const humorSelection = document.getElementById("humorSelection").value = 'Selecione';
-            const upsellDescription = document.getElementById("upsellDescription").value = '';
+            const upsellDescription = document.getElementById("upsellDescription").innerText = '';
 
             problemCheckbox.checked = false;
             doubtCheckbox.checked = false;
