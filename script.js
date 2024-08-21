@@ -39,21 +39,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(!problemCheckbox.checked && !doubtCheckbox.checked){
             createNotif("Selecione um tipo de chamado", "error");
+            return;
         }
         else if(!problemCause.value){
             createNotif("Descreva a causa do problema", "error")
+            return;
         }
         else if(!resolution.innerText){
             createNotif("Informe a resolução do suporte", "error")
+            return;
         }
         else if(humorSelection.value === 'Selecione'){
             createNotif("Selecione o humor do cliente", "error")
+            return;
         }
         else if(!upsellSituationNo.checked && !upsellSituationYes.checked){
             createNotif("Seleciona a situação do upsell", "error")
+            return;
         }
         if(upsellSituationYes.checked && !upsellDescription.value){
             createNotif("Descreva a situação do upsell", "error")
+            return;
         }
         else{
             function addText(label, value) {
@@ -76,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Unir todos os textos em uma string com quebras de linha
             let finalText = textsToCopy.join('');
-            navigator.clipboard.writeText(finalText).trim();
+            navigator.clipboard.writeText(finalText.trim());
             createNotif("Texto Copiado!", "success");
 
             const docNumber = document.getElementById("docNumber").value = '';
