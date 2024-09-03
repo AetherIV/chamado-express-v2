@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             createNotif("Seleciona a situação do upsell", "error")
             return;
         }
-        if(upsellSituationYes.checked && !upsellDescription.value){
+        if(upsellSituationYes.checked && !upsellDescription.innerText){
             createNotif("Descreva a situação do upsell", "error")
             return;
         }
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const docNumber = document.getElementById("docNumber").value = '';
             const errorMessage = document.getElementById("errorMessage").value = '';
             const problemCause = document.getElementById("problemCause").value = '';
-            const resolution = document.getElementById("resolution").innerHTML = '';
+            const resolution = document.getElementById("resolution").innerText = '';
             const clientFeedback = document.getElementById("clientFeedback").value = '';
             const humorSelection = document.getElementById("humorSelection").value = 'Selecione';
             const upsellDescription = document.getElementById("upsellDescription").innerText = '';
