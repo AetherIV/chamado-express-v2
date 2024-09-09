@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         
             // Capturar os valores e adicionar ao array
-            addText('TIPO DE CHAMADO', document.querySelector('.checkboxes:checked') ? document.querySelector('.checkboxLabels').innerText.trim(): '');
+            addText('TIPO DE CHAMADO', document.querySelector('#doubtCheckbox').checked ? 'Dúvida' : document.querySelector('#problemCheckbox').checked ? 'Problema' : '');
             addText('NÚMERO DO DOCUMENTO', document.getElementById('docNumber').value.trim());
             addText('MENSAGEM DE ERRO', document.getElementById('errorMessage').value.trim());
             addText('CAUSA DO PROBLEMA', document.getElementById('problemCause').value.trim());
