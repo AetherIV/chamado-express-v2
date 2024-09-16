@@ -110,13 +110,17 @@ footer {
   background-color: var(--default-bg);
 }
 
+#docNumber{
+  width: 30%;
+}
+
 .textSpans {
   width: 100%;
   min-height: 10vh;
   background-color: var(--alternate-bg);
   color: var(--text-color);
   padding: 10px;
-  border: none;
+  border: 1.3px inset var(--alternate-bg);
   border-radius: 20px;
   overflow: hidden;
   white-space: pre-wrap;
@@ -124,15 +128,23 @@ footer {
   margin-bottom: 20px;
 }
 
+.textSpans:focus{
+  outline: none;
+}
+
 .textInputs {
   background-color: var(--alternate-bg);
   width: 100%;
   height: 5vh;
   border-radius: 20px;
-  border: none;
+  border: 1.3px inset var(--alternate-bg);
   padding: 5px;
   color: var(--text-color);
   font-size: 1em;
+}
+
+.textInputs:focus{
+  outline: none;
 }
 
 .checkboxLabels, .textLabels{
@@ -142,7 +154,7 @@ footer {
 #humorSelection {
   background-color: var(--alternate-bg);
   color: var(--text-color);
-  width: 90px;
+  width: 100px;
   border-radius: 20px;
   border: none;
   padding: 10px;
